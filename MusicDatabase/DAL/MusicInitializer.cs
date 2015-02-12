@@ -13,7 +13,7 @@ namespace MusicDatabase.DAL
         {
             var artists = new List<Artist>
             {
-            new Artist{ArtistID = 1, ArtistName= "Relient K"},
+            new Artist{ ArtistName= "Relient K"},
             };
 
             artists.ForEach(s => context.Artists.Add(s));
@@ -21,14 +21,14 @@ namespace MusicDatabase.DAL
 
             var Albums = new List<Album>
             {
-            new Album{AlbumID=1,AlbumTitle="MMHHMM", ArtistID=1,Genre= "Rock", ReleaseDate = DateTime.Parse("2005-09-01")},
+            new Album{AlbumTitle="MMHHMM", ArtistID=1,Genre= "Rock", ReleaseDate = DateTime.Parse("2005-09-01")},
       
             };
             Albums.ForEach(s => context.Albums.Add(s));
             context.SaveChanges();
             var songs = new List<Song>
             {
-            new Song{SongID=1, AlbumID=1, songName= "Sunny With a High of 75", songLength= 3.36},
+            new Song{songName= "Sunny With a High of 75", songLength= 3.36},
            
             };
             songs.ForEach(s => context.Songs.Add(s));

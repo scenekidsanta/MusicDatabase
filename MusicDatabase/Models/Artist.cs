@@ -9,6 +9,7 @@ namespace MusicDatabase.Models
         public string ArtistName { get; set; }
         
         public virtual ICollection<Album> Albums { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
     
     }
 }

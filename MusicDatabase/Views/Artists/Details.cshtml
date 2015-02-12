@@ -17,6 +17,33 @@
         <dd>
             @Html.DisplayFor(model => model.ArtistName)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Albums)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Album Name</th>
+                    <th>Genre</th>
+                    <th>Release Date</th>
+                      
+                </tr>
+                @foreach (var item in Model.Albums)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlbumTitle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReleaseDate)
+                        </td>
+                    </tr>     
+            }
+            </table>
+        </dd>
 
     </dl>
 </div>

@@ -10,6 +10,10 @@ namespace MusicDatabase.Models
     {
         public int ArtistID { get; set; }
         public string ArtistName { get; set; }
+        public string AlbumTitle { get; set; }
+        public string Genre { get; set; }
+        public DateTime ReleaseDate { get; set; }
+
         public AlbumViewModel Album { get; set; }
 
 
