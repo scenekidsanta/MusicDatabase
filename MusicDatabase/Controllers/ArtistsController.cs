@@ -13,15 +13,14 @@ namespace MusicDatabase.Controllers
 {
     public class ArtistsController : Controller
     {
-        private MusicContext db = new MusicContext();
+        public MusicContext db = new MusicContext();
 
         // GET: Artists
         public ActionResult Index()
         {
             
-            MusicContext db = new MusicContext();
-             var artists = from a in db.Artists.Include("Albums")
-                          select a ;
+             var artists = from a in db.Artists.Include("Albums") 
+                          select a;
 
   var artistVM = new List<ArtistViewModel>();
             foreach(Artist a in artists)
@@ -30,7 +29,7 @@ namespace MusicDatabase.Controllers
                 foreach(Album b in a.Albums)
                 {
                     artistVM.Add(new ArtistViewModel() {
-                                ArtistName= a.ArtistName, AlbumTitle= b.AlbumTitle, Genre = b.Genre, ReleaseDate = b.ReleaseDate
+                                ArtistID = a.ArtistID,ArtistName= a.ArtistName, AlbumTitle= b.AlbumTitle, Genre = b.Genre, ReleaseDate = b.ReleaseDate
                                 
                                 });
                 }
@@ -44,7 +43,6 @@ namespace MusicDatabase.Controllers
         // GET: Artists/Details/5
         public ActionResult Details(int? id)
         {
-            id++;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -74,13 +72,17 @@ namespace MusicDatabase.Controllers
             {
                 Artist art = new Artist();
                 Album alb = new Album();
-                art.ArtistName = artist.ArtistName;
-                alb.AlbumTitle = artist.AlbumTitle;
-                alb.Genre = artist.Genre;
-                alb.ReleaseDate = artist.ReleaseDate;
-                db.Artists.Add(art);
-                db.Albums.Add(alb);
-                db.SaveChanges();
+                    art.ArtistName = artist.ArtistName;
+                    alb.AlbumTitle = artist.AlbumTitle;
+                    alb.Genre = artist.Genre;
+                    alb.ReleaseDate = artist.ReleaseDate;
+                    db.Artists.Add(art);
+                    db.Albums.Add(alb);
+                    db.SaveChanges();
+           
+                 
+               
+
                 return RedirectToAction("Index");
             }
 

@@ -52,3 +52,6 @@ C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\bin\Microsoft.Ow
 C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Debug\MusicDatabase.dll
 C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Debug\MusicDatabase.pdb
+C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Debug\MusicDatabase.csprojResolveAssemblyReference.cache
+C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Debug\MusicDatabase.Migrations.InitialCreate.resources
+C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Debug\MusicDatabase.csproj.GenerateResource.Cache
