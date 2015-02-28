@@ -161,9 +161,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlbumsRepoController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\AlbumRepository.cs" />
+    <Compile Include="DAL\IAlbumRepository.cs" />
     <Compile Include="DAL\MusicContext.cs" />
     <Compile Include="DAL\MusicInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -248,6 +251,16 @@
     <Content Include="Views\Artists\Details.cshtml" />
     <Content Include="Views\Artists\Edit.cshtml" />
     <Content Include="Views\Artists\Index.cshtml" />
+    <Content Include="Views\ArtistRepo\Create.cshtml" />
+    <Content Include="Views\ArtistRepo\Delete.cshtml" />
+    <Content Include="Views\ArtistRepo\Details.cshtml" />
+    <Content Include="Views\ArtistRepo\Edit.cshtml" />
+    <Content Include="Views\ArtistRepo\Index.cshtml" />
+    <Content Include="Views\AlbumsRepo\Create.cshtml" />
+    <Content Include="Views\AlbumsRepo\Delete.cshtml" />
+    <Content Include="Views\AlbumsRepo\Details.cshtml" />
+    <Content Include="Views\AlbumsRepo\Edit.cshtml" />
+    <Content Include="Views\AlbumsRepo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
