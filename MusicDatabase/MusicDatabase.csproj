@@ -161,20 +161,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AlbumsRepoController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
+    <Compile Include="Controllers\EditInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="DAL\AlbumRepository.cs" />
-    <Compile Include="DAL\IAlbumRepository.cs" />
+    <Compile Include="DAL\FakeMusicDatabaseRepo.cs" />
+    <Compile Include="DAL\FakeUnitOfWork.cs" />
+    <Compile Include="DAL\IUnitOfWork.cs" />
+    <Compile Include="DAL\MusicDatabaseRepo.cs" />
+    <Compile Include="DAL\IMusicDatabaseRep.cs" />
     <Compile Include="DAL\MusicContext.cs" />
     <Compile Include="DAL\MusicInitializer.cs" />
+    <Compile Include="DAL\UnitOfWork.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201502262022068_InitialCreate.cs" />
-    <Compile Include="Migrations\201502262022068_InitialCreate.Designer.cs">
-      <DependentUpon>201502262022068_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201503051911035_InitialCreate.cs" />
+    <Compile Include="Migrations\201503051911035_InitialCreate.Designer.cs">
+      <DependentUpon>201503051911035_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -182,6 +186,7 @@
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\ArtistViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IEntityModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -264,6 +269,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\EditInfo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -273,8 +279,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502262022068_InitialCreate.resx">
-      <DependentUpon>201502262022068_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503051911035_InitialCreate.resx">
+      <DependentUpon>201503051911035_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
