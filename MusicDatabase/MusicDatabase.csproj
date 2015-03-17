@@ -48,6 +48,12 @@
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -162,17 +168,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
-    <Compile Include="Controllers\EditInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="DAL\FakeMusicDatabaseRepo.cs" />
-    <Compile Include="DAL\FakeUnitOfWork.cs" />
-    <Compile Include="DAL\IUnitOfWork.cs" />
-    <Compile Include="DAL\MusicDatabaseRepo.cs" />
-    <Compile Include="DAL\IMusicDatabaseRep.cs" />
     <Compile Include="DAL\MusicContext.cs" />
     <Compile Include="DAL\MusicInitializer.cs" />
-    <Compile Include="DAL\UnitOfWork.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,6 +194,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -256,20 +256,9 @@
     <Content Include="Views\Artists\Details.cshtml" />
     <Content Include="Views\Artists\Edit.cshtml" />
     <Content Include="Views\Artists\Index.cshtml" />
-    <Content Include="Views\ArtistRepo\Create.cshtml" />
-    <Content Include="Views\ArtistRepo\Delete.cshtml" />
-    <Content Include="Views\ArtistRepo\Details.cshtml" />
-    <Content Include="Views\ArtistRepo\Edit.cshtml" />
-    <Content Include="Views\ArtistRepo\Index.cshtml" />
-    <Content Include="Views\AlbumsRepo\Create.cshtml" />
-    <Content Include="Views\AlbumsRepo\Delete.cshtml" />
-    <Content Include="Views\AlbumsRepo\Details.cshtml" />
-    <Content Include="Views\AlbumsRepo\Edit.cshtml" />
-    <Content Include="Views\AlbumsRepo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\EditInfo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

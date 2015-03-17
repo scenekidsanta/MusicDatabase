@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MusicDatabase.DAL;
 using MusicDatabase.Models;
-
+using PagedList;
 namespace MusicDatabase.Controllers
 {
     public class ArtistsController : Controller
@@ -16,11 +16,29 @@ namespace MusicDatabase.Controllers
         public MusicContext db = new MusicContext();
 
         // GET: Artists
-        public ActionResult Index()
+        public ActionResult Index(string searchString, string sortOrder, string currentFilter)
         {
             
              var artists = from a in db.Artists.Include("Albums") 
                           select a;
+             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+
+             switch (sortOrder)
+             {
+                 case "name_desc":
+                     artists = artists.OrderByDescending(s => s.ArtistName);
+                     break;
+             }
+
+             if (!String.IsNullOrEmpty(searchString))
+             {
+                 artists = artists.Where(s => s.ArtistName.Contains(searchString));
+             }
+
+            
+
+            
+
 
   var artistVM = new List<ArtistViewModel>();
             foreach(Artist a in artists)
@@ -35,6 +53,8 @@ namespace MusicDatabase.Controllers
                 }
             }
 
+
+         
             return View(artistVM);
         }
         
@@ -48,10 +68,13 @@ namespace MusicDatabase.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Artist artist = db.Artists.Find(id);
+            
             if (artist == null)
             {
                 return HttpNotFound();
             }
+           
+
             return View(artist);
         }
 

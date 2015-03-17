@@ -23,5 +23,6 @@ namespace MusicDatabase.Models
             public string Genre { get; set; }
             public DateTime ReleaseDate { get; set; }
         }
+       
     }
 }

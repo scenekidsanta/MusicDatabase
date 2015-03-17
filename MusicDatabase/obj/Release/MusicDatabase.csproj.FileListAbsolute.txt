@@ -55,3 +55,7 @@ C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Release\Musi
 C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Release\MusicDatabase.dll
 C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Release\MusicDatabase.pdb
 C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\obj\Release\MusicDatabase.csprojResolveAssemblyReference.cache
+C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\bin\PagedList.dll
+C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\bin\PagedList.Mvc.dll
+C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\bin\PagedList.xml
+C:\Users\jpoet_000\Documents\GitHub\MusicDatabase\MusicDatabase\bin\PagedList.Mvc.xml
